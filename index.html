@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>lines-tracker</title>
+  </head>
+  <body>
+    <div>
+      <form id="form">
+        <label for="bet-type">Bet Type</label>
+        <select name="bet_type" id="bet-type">
+          <option value="straight">Straight</option>
+          <option value="parlay">Parlay</option>
+        </select>
+        <label for="outcome">Outcome</label>
+        <select name="outcome" id="outcome">
+          <option value="won">Won</option>
+          <option value="lost">Lost</option>
+        </select>
+        <label for="date-placed">Date Placed</label>
+        <input type="date" name="date_placed" id="date-placed" />
+        <label for="wager-amt">Wager Amount</label>
+        <input
+          type="text"
+          name="wager_amt"
+          id="wager-amt"
+          step="0.01"
+          pattern="\d+(\.\d{2})?"
+          required
+        />
+        <label for="wager-outcome">Wager Outcome</label>
+        <input
+          type="text"
+          name="wager_outcome"
+          id="wager-outcome"
+          step="0.01"
+          pattern="\d+(\.\d{2})?"
+          required
+        />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
