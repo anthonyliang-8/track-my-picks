@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.form-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* change child items of form to have padding */
+
+#form {
+  padding: 1.5em;
+  border: 1px solid lightgrey;
+  border-radius: 8px;
+}
+
+@media (max-width: 1200px) {
+  #form {
+    display: flex;
+    flex-direction: column;
+    padding: 3em;
+    width: 20em;
+  }
+}
+
+nav li {
+  display: inline-block;
+}

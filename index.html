@@ -10,10 +10,17 @@
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="dist/output.css" />
     <title>lines-tracker</title>
   </head>
   <body>
+    <nav>
+      <ul>
+        <li>Entry</li>
+        <li>Table</li>
+      </ul>
+    </nav>
+    <h1 class="text-3xl text-center font-bold">Degen Tracker</h1>
     <div class="form-div">
       <form id="form">
         <label for="bet-type">Bet Type</label>
@@ -27,9 +34,15 @@
           <option value="lost">Lost</option>
         </select>
         <label for="date-placed">Date Placed</label>
-        <input type="date" name="date_placed" id="date-placed" />
+        <input
+          class="border border-gray-500 rounded-md"
+          type="date"
+          name="date_placed"
+          id="date-placed"
+        />
         <label for="wager-amt">Wager Amount</label>
         <input
+          class="border border-gray-500 rounded-md p-1.5"
           type="text"
           name="wager_amt"
           id="wager-amt"
@@ -39,6 +52,7 @@
         />
         <label for="wager-outcome">Wager Outcome</label>
         <input
+          class="border border-gray-500 rounded-md p-1.5"
           type="text"
           name="wager_outcome"
           id="wager-outcome"
@@ -46,9 +60,13 @@
           pattern="\d+(\.\d{2})?"
           required
         />
-        <button type="submit">Submit</button>
+        <button
+          class="bg-blue-500 text-white hover:bg-white hover:text-blue-500 border border-blue-500 font-bold py-2 px-4 rounded transition-colors duration-300 mt-2"
+        >
+          Submit
+        </button>
       </form>
     </div>
   </body>
-  <script src="script.js"></script>
+  <script src="src/script.js"></script>
 </html>
